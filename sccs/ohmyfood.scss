@@ -6,6 +6,10 @@ h1 {
   margin: 0px;
 }
 
+p {
+    margin: 0px;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -61,16 +65,12 @@ header {
     outline: 0;
     border: none;
     border-radius: 25px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
   }
 }
 .fonctionnement {
   margin-top: 50px;
-  margin-left: 15px;
   &__header {
+    margin-left: 15px;
     font-size: 30px;
     font-weight: bolder;
   }
@@ -87,39 +87,105 @@ header {
     margin-left: 30px;
     background-color: #f6f6f6;
     border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
     display: flex;
     align-items: center;
     box-shadow: 8px 8px 8px #e7e7e7;
     font-size: 18px;
     font-weight: bold;
     i {
-        margin-left: 20px;
-        color: #ababab;
-        font-size: 20px;
+      margin-left: 20px;
+      color: #ababab;
+      font-size: 20px;
     }
     p {
-        margin-left: 20px;
+      margin-left: 20px;
     }
-    &--active{
-        background-color: #f5edff;
-        i{
-            color: #9356dc;
-        }
+    &--active {
+      background-color: #f5edff;
+      i {
+        color: #9356dc;
+      }
     }
-}
+  }
   &__numero {
-      margin-left: -15px;
-      background-color: #9356dc;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 50%;
-      -webkit-border-radius: 50%;
-      -moz-border-radius: 50%;
-      -ms-border-radius: 50%;
-      -o-border-radius: 50%;
+    margin-left: -15px;
+    background-color: #9356dc;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
 }
+.restaurants {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #f6f6f6;
+  &__header {
+    margin-left: 15px;
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-top: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.restaurant {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 8px 8px 8px #e7e7e7;
+  margin-bottom: 25px;
+  &__img {
+    img {
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__legende {
+      display: flex;
+      flex-direction: row;
+      margin: 15px;
+  }
+  &__texte {
+      font-size: 18px;
+  }
+  &__titre {
+      font-weight: bolder;
+      padding-bottom: 5px;
+  }
+  &__like {
+      margin-left: auto;
+      font-size: 30px;
+      cursor: pointer;
+  }
+  &__like--active {
+      //
+  }
+}
+footer {
+    background-color: #353535;
+    color: white;
+    padding-bottom: 30px;
+    .logo {
+        padding: 15px 25px 0px 25px;
+        font-family: 'Shrikhand', cursive;
+        font-size: 20px;
+    }
+    ul {
+        list-style-type: none;
+        padding-left: 25px;
+    }
+    li {
+        padding-bottom: 5px;
+    }
 }
