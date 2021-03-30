@@ -13,37 +13,45 @@
         @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
     </style>
     <title>ohmyfood</title>
+    <link rel="icon" type="image/png" href="images/logo/faviohmyfood.JPG" />
   </head>
   <body>
-    <header>
-      <img src="images/logo/ohmyfood.png" />
-    </header>
-    <section class="accroche">
-      <div class="accroche__header">
+    <header class="header">
+      <div class="header__precedent">
+          <a href="index.html">
+              <i class="fas fa-arrow-left"></i>
+          </a>
+      </div>
+      <div class="header__logo">
+          <img src="images/logo/ohmyfood.png" />
+      </div>
+  </header>
+  <section class="accroche">
+      <div class="accroche__titre">
         <i class="fas fa-map-marker-alt"></i>&nbsp;Paris, Belleville
       </div>
       <div class="accroche__card">
         <div class="accroche__slogan">Réserver le menu qui vous convient</div>
         <div class="accroche__resume">
-          Découvrez des restaurants d'exception sélectionnés par nous soins.
+          Découvrez des restaurants d'exception, </br> sélectionnés par nous soins.
         </div>
         <button class="accroche__bouton">Explorer nos restaurants</button>
       </div>
     </section>
     <section class="fonctionnement">
-      <div class="fonctionnement__header">Fonctionnement</div>
-      <div class="fonctionnement__items">
-        <div class="fonctionnement__item">
+      <div class="fonctionnement__titre">Fonctionnement</div>
+      <div class="fonctionnement__liste">
+        <div class="fonctionnement__element">
           <div class="fonctionnement__numero">1</div>
           <i class="fas fa-mobile-alt"></i>
           <p>Choississez un restaurant</p>
         </div>
-        <div class="fonctionnement__item">
+        <div class="fonctionnement__element">
           <div class="fonctionnement__numero">2</div>
           <i class="fas fa-list"></i>
           <p>Composez votre menu</p>
         </div>
-        <div class="fonctionnement__item fonctionnement__item--active">
+        <div class="fonctionnement__element fonctionnement__element--active">
           <div class="fonctionnement__numero">3</div>
           <i class="fas fa-store"></i>
           <p>Dégustez au restaurant</p>
@@ -51,16 +59,16 @@
       </div>
     </section>
     <section class="restaurants">
-      <div class="restaurants__header">Restaurants</div>
-      <div class="restaurants__list">
-        <div class="restaurant">
+      <div class="restaurants__titre">Restaurants</div>
+      <div class="restaurants__liste">
+        <a href="lapalettedugout.html" class="restaurant">
           <div class="restaurant__img">
             <img
               src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
             />
           </div>
           <div class="restaurant__legende">
-            <div class="restaurant__texte">
+            <div href="lapalettedugout.html" class="restaurant__texte">
               <div class="restaurant__titre">
                 <p>La palette du goût</p>
               </div>
@@ -72,7 +80,7 @@
               <i class="far fa-heart"></i>
             </div>
           </div>
-        </div>
+        </a>
         <div class="restaurant">
             <div class="restaurant__img">
               <img
@@ -141,8 +149,8 @@
             ohmyfood
         </div>
         <ul>
-            <li><i class="fas fa-utensils"></i>&nbsp;Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i>&nbsp;Devenir partenaire</li>
+            <li><span class="footer__icone"><i class="fas fa-utensils"></i></span>Proposer un restaurant</li>
+            <li><span class="footer__icone"><i class="fas fa-hands-helping"></i></span>Devenir partenaire</li>
             <li>Mentions légales</li>
             <li>Contact</li>
         </ul>

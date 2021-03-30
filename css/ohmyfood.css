@@ -10,27 +10,51 @@ p {
   margin: 0px;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
   height: 35px;
   margin-bottom: 15px;
 }
 
-header img {
+.header__logo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.header__logo img {
+  max-height: 35px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.accroche {
-  border-top: 1px solid #cfcfcf;
+.header__precedent {
+  display: none;
 }
 
-.accroche__header {
+.header__precedent--affiche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: 10px;
+  float: left;
+  font-size: 25px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.accroche {
+  border-top: 2px solid #cfcfcf;
+}
+
+.accroche__titre {
   background-color: #eaeaea;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -87,13 +111,13 @@ header img {
   margin-top: 50px;
 }
 
-.fonctionnement__header {
+.fonctionnement__titre {
   margin-left: 15px;
   font-size: 30px;
   font-weight: bolder;
 }
 
-.fonctionnement__items {
+.fonctionnement__liste {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +132,9 @@ header img {
   height: 270px;
 }
 
-.fonctionnement__item {
+.fonctionnement__element {
+  -webkit-box-shadow: 8px 8px 8px #e7e7e7;
+          box-shadow: 8px 8px 8px #e7e7e7;
   height: 75px;
   width: 90%;
   margin-left: 30px;
@@ -120,27 +146,25 @@ header img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 8px 8px 8px #e7e7e7;
-          box-shadow: 8px 8px 8px #e7e7e7;
   font-size: 18px;
   font-weight: bold;
 }
 
-.fonctionnement__item i {
+.fonctionnement__element i {
   margin-left: 20px;
   color: #ababab;
   font-size: 20px;
 }
 
-.fonctionnement__item p {
+.fonctionnement__element p {
   margin-left: 20px;
 }
 
-.fonctionnement__item--active {
+.fonctionnement__element--active {
   background-color: #f5edff;
 }
 
-.fonctionnement__item--active i {
+.fonctionnement__element--active i {
   color: #9356dc;
 }
 
@@ -150,10 +174,6 @@ header img {
   color: white;
   padding: 5px 10px;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
 
 .restaurants {
@@ -162,7 +182,7 @@ header img {
   background-color: #f6f6f6;
 }
 
-.restaurants__header {
+.restaurants__titre {
   margin-left: 15px;
   margin-bottom: 25px;
   font-size: 30px;
@@ -170,7 +190,7 @@ header img {
   padding-top: 50px;
 }
 
-.restaurants__list {
+.restaurants__liste {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,10 +204,10 @@ header img {
 }
 
 .restaurant {
-  width: 90%;
-  border-radius: 15px;
   -webkit-box-shadow: 8px 8px 8px #e7e7e7;
           box-shadow: 8px 8px 8px #e7e7e7;
+  width: 90%;
+  border-radius: 15px;
   margin-bottom: 25px;
 }
 
@@ -226,6 +246,133 @@ header img {
   cursor: pointer;
 }
 
+.page__contenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.photo {
+  z-index: 10;
+  height: 250px;
+}
+
+.photo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 100;
+  margin-top: -30px;
+  background-color: #f6f6f6;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding-bottom: 75px;
+  padding-top: 15px;
+}
+
+.menu__titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  margin-left: 15px;
+}
+
+.menu__sous_titre {
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-left: 15px;
+}
+
+.menu__ligne {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+  margin-left: 17px;
+}
+
+.menu__bouton_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.menu__bouton {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: #ff79da;
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(to right bottom, #ff79da, #9356dc);
+  font-size: 16px;
+  padding: 10px;
+  width: 220px;
+  height: 50px;
+  outline: 0;
+  border: none;
+  border-radius: 25px;
+  margin-top: 35px;
+}
+
+.plats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plat {
+  -webkit-box-shadow: 8px 8px 8px #e7e7e7;
+          box-shadow: 8px 8px 8px #e7e7e7;
+  padding: 10px;
+  background-color: white;
+  width: 90%;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.plat__titre {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.plat__complement {
+  font-size: small;
+}
+
+.plat__prix {
+  margin-left: auto;
+  font-weight: bold;
+  margin-top: auto;
+  margin-right: 10px;
+}
+
 footer {
   background-color: #353535;
   color: white;
@@ -234,7 +381,7 @@ footer {
 
 footer .logo {
   padding: 15px 25px 0px 25px;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   font-size: 20px;
 }
 
@@ -245,5 +392,13 @@ footer ul {
 
 footer li {
   padding-bottom: 5px;
+}
+
+footer .footer__icone {
+  padding-right: 10px;
+}
+
+footer .footer__icone .fa-hands-helping {
+  font-size: 10.5px;
 }
 /*# sourceMappingURL=ohmyfood.css.map */
