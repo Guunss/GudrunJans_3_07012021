@@ -269,6 +269,7 @@ a {
   &__legende {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin: 15px;
   }
   &__texte {
@@ -278,14 +279,27 @@ a {
     font-weight: bolder;
     padding-bottom: 5px;
   }
+  &__btn {
+    @extend .menu__btn;
+    &:hover::before {
+      @extend .menu__btn:hover::before;
+    }
+
+    &::before {
+      @extend .menu__btn::before;
+    }
+  }
+
   &__like {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    font-size: 30px;
-    cursor: pointer;
+    @extend .menu__like;
+  }
+
+  &__btn:hover {
+    .restaurant__like {
+      &--off {
+        opacity: 0;
+      }
+    }
   }
 }
 
@@ -326,12 +340,12 @@ a {
     margin-left: 15px;
   }
   &__btn {
-    height: 2rem;
-    width: 2rem;
+    height: 30px;
+    width: 30px;
     padding: 0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     position: relative;
     background-color: black;
@@ -349,21 +363,29 @@ a {
       left: 0;
       height: 100%;
       width: 100%;
-      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+      background: linear-gradient(
+        0deg,
+        $color-primary 0%,
+        $color-secondary 100%
+      );
+      -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
     }
   }
 
   &__like {
-    transition-duration: .25s;
+    transition-duration: 1s;
     background-color: #f6f6f6;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     mix-blend-mode: lighten;
     font-size: 30px;
   }

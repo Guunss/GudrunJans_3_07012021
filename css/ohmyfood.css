@@ -375,6 +375,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 15px;
 }
 
@@ -387,20 +390,8 @@ a {
   padding-bottom: 5px;
 }
 
-.restaurant__like {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
-  font-size: 30px;
-  cursor: pointer;
+.restaurant__btn:hover .restaurant__like--off {
+  opacity: 0;
 }
 
 .page__contenu {
@@ -459,9 +450,9 @@ a {
   margin-left: 15px;
 }
 
-.menu__btn {
-  height: 2rem;
-  width: 2rem;
+.menu__btn, .restaurant__btn {
+  height: 30px;
+  width: 30px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,13 +468,12 @@ a {
   background-color: black;
 }
 
-.menu__btn:hover::before {
+.menu__btn:hover::before, .restaurant__btn:hover::before {
   opacity: 1;
 }
 
-.menu__btn::before {
+.menu__btn::before, .restaurant__btn::before {
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   content: "";
   position: absolute;
@@ -493,11 +483,15 @@ a {
   width: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(#9356dc), to(#ff79da));
   background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
-.menu__like {
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
+.menu__like, .restaurant__like {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   background-color: #f6f6f6;
   position: absolute;
   top: 0;
@@ -517,7 +511,7 @@ a {
   font-size: 30px;
 }
 
-.menu__btn:hover .menu__like--off {
+.menu__btn:hover .menu__like--off, .restaurant__btn:hover .menu__like--off {
   opacity: 0;
 }
 
