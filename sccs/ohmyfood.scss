@@ -145,6 +145,7 @@ a {
 .header {
   height: 35px;
   margin-bottom: 15px;
+  box-shadow: opx, 10px,#cfcfcf;
   &__logo {
     width: 60%;
     margin-left: auto;
@@ -169,8 +170,17 @@ a {
   }
 }
 
+.line {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #cfcfcf,
+    #eaeaea
+  );
+}
+
 .accroche {
-  border-top: 2px solid #cfcfcf;
   &__titre {
     background-color: #eaeaea;
     padding-top: 10px;
@@ -178,6 +188,9 @@ a {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
+    i {
+      margin-right: 25px;
+    }
   }
   &__card {
     background-color: $color-fond-card;
