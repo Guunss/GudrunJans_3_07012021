@@ -504,7 +504,6 @@ a {
 .plat {
   -webkit-box-shadow: 8px 8px 8px #e7e7e7;
           box-shadow: 8px 8px 8px #e7e7e7;
-  padding: 10px;
   background-color: white;
   width: 90%;
   border-radius: 10px;
@@ -512,21 +511,34 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
-  -webkit-animation: menuApparition .4s ease-in-out;
-          animation: menuApparition .4s ease-in-out;
+  overflow: hidden;
+  -webkit-animation: menuApparition 0.4s ease-in-out;
+          animation: menuApparition 0.4s ease-in-out;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
+.plat__texte {
+  padding: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .plat__titre {
   font-weight: bold;
   padding-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .plat__complement {
   font-size: small;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .plat__prix {
@@ -534,6 +546,44 @@ a {
   font-weight: bold;
   margin-top: auto;
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.plat__validation {
+  width: 50px;
+  background-color: #99e2d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-right: -50px;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.plat__validation i {
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 50%;
+  padding: 2px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.plat:hover .plat__validation {
+  margin-right: 0px;
+}
+
+.plat:hover i {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 
 .plat--delay-0 {

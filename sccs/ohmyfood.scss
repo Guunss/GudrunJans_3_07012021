@@ -32,7 +32,7 @@ $anim-loading-delay: $anim-loading-duration / 5;
 @keyframes bars {
   0% {
     transform: scaleY(0.5);
-}
+  }
   100% {
     transform: scaleY(1);
   }
@@ -55,14 +55,14 @@ $anim-loading-delay: $anim-loading-duration / 5;
     -moz-transform: scaleY(0);
     -ms-transform: scaleY(0);
     -o-transform: scaleY(0);
-}
+  }
   100% {
     transform: scaleY(1);
     -webkit-transform: scaleY(1);
     -moz-transform: scaleY(1);
     -ms-transform: scaleY(1);
     -o-transform: scaleY(1);
-}
+  }
 }
 
 body {
@@ -83,8 +83,8 @@ a {
 }
 
 .loading {
-  background-color: rgba(#fff,$alpha: 0.8);
-  animation: loader 1s ;
+  background-color: rgba(#fff, $alpha: 0.8);
+  animation: loader 1s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
   position: fixed;
@@ -93,19 +93,18 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  &__container{
+  &__container {
     display: flex;
     justify-content: space-evenly;
     width: 200px;
     height: 200px;
-     
   }
-  &__bar{
+  &__bar {
     height: 100%;
     width: 25px;
     animation: bars $anim-loading-duration backwards ease-in-out infinite;
     animation-direction: alternate;
-    &--1{
+    &--1 {
       background-color: $color-ternary;
     }
     &--2 {
@@ -287,9 +286,7 @@ a {
     margin-left: auto;
     font-size: 30px;
     cursor: pointer;
-
   }
-
 }
 
 .page__contenu {
@@ -351,32 +348,65 @@ a {
 }
 
 .plat {
-    @include ombre();
-  padding: 10px;
+  @include ombre();
   background-color: white;
   width: 90%;
   border-radius: 10px;
   display: flex;
   margin-bottom: 10px;
-
-    &__titre
-{
+  overflow: hidden;
+  &__texte {
+    padding: 10px;
+    overflow: hidden;
+    white-space:nowrap
+  }
+  &__titre {
     font-weight: bold;
     padding-bottom: 5px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis
   }
   &__complement {
     font-size: small;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
   }
   &__prix {
     margin-left: auto;
     font-weight: bold;
     margin-top: auto;
     margin-right: 10px;
+    margin-bottom: 10px;
   }
-  animation: menuApparition .4s ease-in-out;
+  &__validation {
+    width: 50px;
+    background-color: $color-ternary;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    i {
+      color: $color-ternary;
+      background-color: white;
+      border-radius: 50%;
+      padding: 2px;
+      transform: rotate(180deg);
+      transition-duration: 1s;
+    }
+    margin-right: -50px;
+    transition-duration: 1s;
+  }
+  &:hover &__validation {
+    margin-right: 0px;
+  }
+  &:hover i {
+    transform: rotate(0);
+  }
+  animation: menuApparition 0.4s ease-in-out;
   @for $i from 0 to 9 {
     &--delay-#{$i} {
-      animation-delay:  #{$i/10}s;
+      animation-delay: #{$i/10}s;
     }
   }
   transform: scaleX(0);
