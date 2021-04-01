@@ -1,0 +1,71 @@
+.header {
+  height: 35px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: opx, 10px, #cfcfcf;
+          box-shadow: opx, 10px, #cfcfcf;
+}
+
+.header__logo {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.header__logo img {
+  max-height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.header__precedent {
+  display: none;
+}
+
+.header__precedent--affiche {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: 10px;
+  float: left;
+  font-size: 25px;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding-bottom: 30px;
+}
+
+footer .logo {
+  padding: 15px 25px 0px 25px;
+  font-family: "Shrikhand", cursive;
+  font-size: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+  padding-left: 25px;
+}
+
+footer li {
+  padding-bottom: 5px;
+}
+
+footer li a {
+  color: white;
+}
+
+footer .footer__icone {
+  padding-right: 10px;
+}
+
+footer .footer__icone .fa-hands-helping {
+  font-size: 10.5px;
+}
+/*# sourceMappingURL=layout.css.map */

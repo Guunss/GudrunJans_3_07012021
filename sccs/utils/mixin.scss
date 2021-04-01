@@ -1,0 +1,36 @@
+@mixin ombre {
+  box-shadow: 8px 8px 8px #e7e7e7;
+}
+
+@mixin ombre_fonce {
+  box-shadow: 8px 8px 8px #cacaca;
+}
+
+@mixin bouton {
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  background-color: $color-secondary;
+  background: linear-gradient(
+    to right bottom,
+    $color-secondary,
+    $color-primary
+  );
+  font-size: 16px;
+  padding: 10px;
+  width: 220px;
+  height: 50px;
+  outline: 0;
+  border: none;
+  border-radius: 25px;
+  @include ombre();
+}
+
+@mixin bouton_hover {
+  background: linear-gradient(
+    to right bottom,
+    lighten($color-secondary, 10%),
+    lighten($color-primary, 10%)
+  );
+  @include ombre_fonce();
+}
