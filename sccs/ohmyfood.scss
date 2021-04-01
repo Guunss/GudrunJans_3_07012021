@@ -2,12 +2,17 @@ $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-ternary: #99e2d0;
 $color-fond-card: #f6f6f6;
+$color-nouveau: #139273;
 
 $anim-loading-duration: 1000ms;
 $anim-loading-delay: $anim-loading-duration / 5;
 
 @mixin ombre {
   box-shadow: 8px 8px 8px #e7e7e7;
+}
+
+@mixin ombre_fonce {
+  box-shadow: 8px 8px 8px #cacaca;
 }
 
 @mixin bouton {
@@ -27,6 +32,16 @@ $anim-loading-delay: $anim-loading-duration / 5;
   outline: 0;
   border: none;
   border-radius: 25px;
+  @include ombre()
+}
+
+@mixin bouton_hover {
+  background: linear-gradient(
+    to right bottom,
+    lighten($color-secondary, 10%),
+    lighten($color-primary, 10%)
+  );
+  @include ombre_fonce()
 }
 
 @keyframes bars {
@@ -93,6 +108,7 @@ a {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  z-index: 1000;
   &__container {
     display: flex;
     justify-content: space-evenly;
@@ -184,6 +200,9 @@ a {
   }
   &__bouton {
     @include bouton();
+    &:hover {
+      @include bouton_hover();
+    }
   }
 }
 .fonctionnement {
@@ -197,13 +216,19 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     margin-top: 25px;
     height: 270px;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
   }
   &__element {
     @include ombre();
     height: 75px;
     width: 90%;
+    max-width: 300px;
     margin-left: 30px;
     background-color: $color-fond-card;
     border-radius: 15px;
@@ -249,6 +274,11 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -257,6 +287,13 @@ a {
   width: 90%;
   border-radius: 15px;
   margin-bottom: 25px;
+  position: relative;
+  @media (min-width: 1200px) {
+    max-width: 300px;
+  }
+  &:hover {
+    @include ombre_fonce();
+  }
   &__img {
     img {
       border-top-left-radius: 15px;
@@ -266,6 +303,15 @@ a {
       object-fit: cover;
     }
   }
+  &__nouveau {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: $color-nouveau;
+    background-color: lighten($color-nouveau, 30%);
+    border-radius: 2px;
+    padding: 7px;
+}
   &__legende {
     display: flex;
     flex-direction: row;
@@ -338,6 +384,12 @@ a {
     font-family: "Shrikhand", cursive;
     font-size: 25px;
     margin-left: 15px;
+  }
+  &__liste {
+    @media (min-width: 1200px) {
+      display: flex;
+      justify-content: space-evenly;
+    }
   }
   &__btn {
     height: 30px;
@@ -416,6 +468,9 @@ a {
   &__bouton {
     @include bouton();
     margin-top: 35px;
+    &:hover {
+      @include bouton_hover();
+    }
   }
 }
 
@@ -423,6 +478,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .plat {
