@@ -402,6 +402,8 @@ a {
 @media (min-width: 1200px) {
   .restaurant {
     max-width: 300px;
+    min-width: 200px;
+    margin-right: 20px;
   }
 }
 
@@ -520,6 +522,12 @@ a {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu__partie {
+    width: 30%;
   }
 }
 

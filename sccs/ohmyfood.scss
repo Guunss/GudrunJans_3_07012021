@@ -290,6 +290,8 @@ a {
   position: relative;
   @media (min-width: 1200px) {
     max-width: 300px;
+    min-width: 200px;
+    margin-right: 20px;
   }
   &:hover {
     @include ombre_fonce();
@@ -389,6 +391,11 @@ a {
     @media (min-width: 1200px) {
       display: flex;
       justify-content: space-evenly;
+    }
+  }
+  &__partie {
+    @media (min-width:1200px) {
+      width: 30%;
     }
   }
   &__btn {
