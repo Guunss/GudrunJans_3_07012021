@@ -314,10 +314,66 @@ a {
   border-top-right-radius: 35px;
   padding-bottom: 75px;
   padding-top: 15px;
+  &__entete {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
   &__titre {
     font-family: "Shrikhand", cursive;
     font-size: 25px;
     margin-left: 15px;
+  }
+  &__btn {
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &::before {
+      opacity: 0;
+      transition: 0.5s;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background:linear-gradient(0deg, $color-primary 0%,$color-secondary 100%);
+    }
+  }
+
+  &__like {
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    mix-blend-mode: lighten;
+    font-size: 30px;
+  }
+
+  &__btn:hover {
+    .menu__like {
+      &--off {
+        opacity: 0;
+      }
+    }
   }
   &__sous_titre {
     text-transform: uppercase;
@@ -358,19 +414,19 @@ a {
   &__texte {
     padding: 10px;
     overflow: hidden;
-    white-space:nowrap
+    white-space: nowrap;
   }
   &__titre {
     font-weight: bold;
     padding-bottom: 5px;
     overflow: hidden;
-    white-space:nowrap;
-    text-overflow: ellipsis
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   &__complement {
     font-size: small;
     overflow: hidden;
-    white-space:nowrap;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   &__prix {
