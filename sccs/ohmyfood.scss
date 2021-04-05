@@ -1,9 +1,9 @@
-@import "./utils/variables.scss";
-@import "./utils/mixin.scss";
-@import "./utils/animations.scss";
+@import "./utils/_variables.scss";
+@import "./utils/_mixin.scss";
+@import "./utils/_animations.scss";
 
-@import "./base/base.scss";
-@import "./layout/layout.scss";
+@import "./base/_base.scss";
+@import "./layout/_layout.scss";
 
-@import "./pages/accueil.scss";
-@import "./pages/menu.scss";
+@import "./pages/_accueil.scss";
+@import "./pages/_menu.scss";

@@ -212,13 +212,14 @@
   &__btn {
     @extend .menu__btn;
     &:hover::before {
-      @extend .menu__btn:hover::before;
+      opacity: 1;
     }
 
     &::before {
-      @extend .menu__btn::before;
+      @include degrade_bg_texte();
     }
   }
+  
 
   &__like {
     @extend .menu__like;
