@@ -73,7 +73,6 @@
     left: 0;
     height: 100%;
     width: 100%;
-    display: flex;
     align-items: center;
     justify-content: center;
     mix-blend-mode: lighten;
@@ -130,7 +129,6 @@
   &__texte {
     padding: 10px;
     overflow: hidden;
-    white-space: nowrap;
   }
   &__titre {
     font-weight: bold;

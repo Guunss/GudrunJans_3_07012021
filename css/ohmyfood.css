@@ -25,6 +25,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0px;
 }
 
 h1 {
@@ -42,8 +43,7 @@ a {
 
 .header {
   height: 35px;
-  margin-bottom: 15px;
-  box-shadow: opx, 10px, #cfcfcf;
+  margin: 15px 0 15px 0;
 }
 .header__logo {
   width: 60%;
@@ -117,7 +117,7 @@ footer .footer__icone .fa-hands-helping {
 .loading__bar {
   height: 100%;
   width: 25px;
-  animation: bars 1000ms backwards ease-in-out infinite;
+  animation: bars 1000ms backwards ease-in-out 4;
   animation-direction: alternate;
 }
 .loading__bar--1 {
@@ -170,7 +170,7 @@ footer .footer__icone .fa-hands-helping {
   font-weight: bolder;
   font-size: 30px;
   text-align: center;
-  margin-left: 10px 0px;
+  margin-left: 0px;
 }
 .accroche__resume {
   text-align: center;
@@ -212,10 +212,11 @@ footer .footer__icone .fa-hands-helping {
   margin-top: 25px;
   height: 270px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .fonctionnement__liste {
     flex-direction: row;
     justify-content: space-evenly;
+    height: 100px;
   }
 }
 .fonctionnement__element {
@@ -223,7 +224,6 @@ footer .footer__icone .fa-hands-helping {
   height: 75px;
   width: 90%;
   max-width: 300px;
-  margin-left: 30px;
   background-color: #f6f6f6;
   border-radius: 15px;
   display: flex;
@@ -270,7 +270,7 @@ footer .footer__icone .fa-hands-helping {
   flex-direction: column;
   align-items: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 651px) {
   .restaurants__liste {
     flex-direction: row;
     flex-wrap: wrap;
@@ -285,11 +285,18 @@ footer .footer__icone .fa-hands-helping {
   margin-bottom: 25px;
   position: relative;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
   .restaurant {
-    max-width: 300px;
-    min-width: 200px;
-    margin-right: 20px;
+    width: 20%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+@media (min-width: 651px) and (max-width: 1299px) {
+  .restaurant {
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
   }
 }
 .restaurant:hover {
@@ -336,7 +343,7 @@ footer .footer__icone .fa-hands-helping {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(to right bottom, #9356dc 0%, #ff79da 100%);
 }
 .restaurant__btn:hover .restaurant__like--off {
   opacity: 0;
@@ -413,7 +420,7 @@ footer .footer__icone .fa-hands-helping {
   left: 0;
   height: 100%;
   width: 100%;
-  background: linear-gradient(0deg, #9356dc 0%, #ff79da 100%);
+  background: linear-gradient(to right bottom, #9356dc 0%, #ff79da 100%);
 }
 .menu__like, .restaurant__like {
   transition-duration: 1s;
@@ -423,7 +430,6 @@ footer .footer__icone .fa-hands-helping {
   left: 0;
   height: 100%;
   width: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
   mix-blend-mode: lighten;
@@ -491,7 +497,6 @@ footer .footer__icone .fa-hands-helping {
 .plat__texte {
   padding: 10px;
   overflow: hidden;
-  white-space: nowrap;
 }
 .plat__titre {
   font-weight: bold;
