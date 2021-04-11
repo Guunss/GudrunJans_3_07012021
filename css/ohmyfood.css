@@ -349,7 +349,7 @@ footer .footer__icone .fa-hands-helping {
   opacity: 0;
 }
 
-.page__contenu {
+.page_contenu {
   display: flex;
   flex-direction: column;
 }
@@ -423,7 +423,7 @@ footer .footer__icone .fa-hands-helping {
   background: linear-gradient(to right bottom, #9356dc 0%, #ff79da 100%);
 }
 .menu__like, .restaurant__like {
-  transition-duration: 1s;
+  transition-duration: 0.6s;
   background-color: #f6f6f6;
   position: absolute;
   top: 0;
@@ -525,7 +525,7 @@ footer .footer__icone .fa-hands-helping {
   align-items: center;
   justify-content: space-evenly;
   margin-right: -50px;
-  transition-duration: 1s;
+  transition-duration: 0.6s;
 }
 .plat__validation i {
   color: #99e2d0;
@@ -533,7 +533,7 @@ footer .footer__icone .fa-hands-helping {
   border-radius: 50%;
   padding: 2px;
   transform: rotate(180deg);
-  transition-duration: 1s;
+  transition-duration: 0.6s;
 }
 .plat:hover .plat__validation {
   margin-right: 0px;
