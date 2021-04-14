@@ -1,8 +1,10 @@
+//style des composants de la pages des menus
 .page_contenu {
   display: flex;
   flex-direction: column;
 }
 
+//la photo doit être en dessous du composant .menu (z-index 10)
 .photo {
   z-index: 10;
   height: 250px;
@@ -17,6 +19,7 @@
   display: flex;
   flex-direction: column;
   z-index: 100;
+  //on remonte le menu pour se placer sur la photo
   margin-top: -30px;
   background-color: $color-fond-card;
   border-top-left-radius: 35px;
@@ -57,9 +60,10 @@
     background-color: black;
 
     &:hover::before {
+      //au survol on affiche le coeur en dégradé
       opacity: 1;
     }
-
+    //on crée un pseudo élément avec un dégradé de couleur
     &::before {
       @include degrade_bg_texte();
     }
@@ -75,6 +79,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
+    //on mix le coeur noir avec le before (degradé) -> on garde seulement le pixel le plus clair => coeur en degradé
     mix-blend-mode: lighten;
     font-size: 30px;
   }
@@ -82,6 +87,7 @@
   &__btn:hover {
     .menu__like {
       &--off {
+        //au survol on masque le coeur non vide
         opacity: 0;
       }
     }
@@ -126,11 +132,14 @@
   display: flex;
   margin-bottom: 10px;
   overflow: hidden;
+  //on souhaite un apparition progressive des éléments du menu => keyframes menuApparition => avec un scaleY
   animation: menuApparition 0.4s ease-in-out;
   transform: scaleX(0);
+  //on garde l'état final de l'animation
   animation-fill-mode: forwards;
   &__texte {
     padding: 10px;
+    //on cache ce qui dépasse de l'élément : pour cacher le check qd il est translaté de 50 px vers la droite
     overflow: hidden;
   }
   &__titre {
@@ -138,12 +147,14 @@
     padding-bottom: 5px;
     overflow: hidden;
     white-space: nowrap;
+    //si pas assez de place alors on souhaite avoir de petits points pour le texte qui dépasse
     text-overflow: ellipsis;
   }
   &__complement {
     font-size: small;
     overflow: hidden;
     white-space: nowrap;
+    //si pas assez de place alors on souhaite avoir de petits points pour le texte qui dépasse
     text-overflow: ellipsis;
   }
   &__prix {
@@ -164,9 +175,12 @@
       background-color: white;
       border-radius: 50%;
       padding: 2px;
+      //point de depart de l'animation : le coche est tourné de 180deg
       transform: rotate(180deg);
+      //la transition dure 0.6s
       transition-duration: 0.6s;
     }
+    // point de départ de l'animation -50px à droite de l'élément contenant (caché)
     margin-right: -50px;
     transition-duration: 0.6s;
   }
@@ -176,6 +190,7 @@
   &:hover i {
     transform: rotate(0);
   }
+  //création des styles delai pour animation des plats
   @for $i from 0 to 9 {
     &--delay-#{$i} {
       animation-delay: #{$i/10}s;
