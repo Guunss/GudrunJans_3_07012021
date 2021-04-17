@@ -1,54 +1,54 @@
 //style de composants communs à toutes les pages
 .header {
-  height: 35px;
-  margin: 15px 0 15px 0;
-  &__logo {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    img {
-      max-height: 35px;
-      object-fit: contain;
-    }
-  }
-  &__precedent {
-    display: none;
-    &--affiche {
-      display: flex;
-      margin-right: auto;
-      margin-left: 10px;
-      float: left;
-      font-size: 25px;
-      height: 100%;
-      align-items: center;
-    }
-  }
+	height: 35px;
+	margin: 15px 0 15px 0;
+	&__logo {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		img {
+			max-height: 35px;
+			object-fit: contain;
+		}
+	}
+	&__precedent {
+		display: none;
+		&--affiche {
+			display: flex;
+			margin-right: auto;
+			margin-left: 10px;
+			float: left;
+			font-size: 25px;
+			height: 100%;
+			align-items: center;
+		}
+	}
 }
 
 footer {
-  background-color: #353535;
-  color: white;
-  padding-bottom: 30px;
-  .logo {
-    padding: 15px 25px 0px 25px;
-    font-family: "Shrikhand", cursive;
-    font-size: 20px;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 25px;
-  }
-  li {
-    padding-bottom: 5px;
-    a {
-      color: white;
-    }
-  }
-  .footer__icone {
-    padding-right: 10px;
-    .fa-hands-helping {
-      font-size: 10.5px;
-    }
-  }
+	background-color: #353535;
+	color: white;
+	padding-bottom: 30px;
+	.logo {
+		padding: 15px 25px 0px 25px;
+		font-family: "Shrikhand", cursive;
+		font-size: 20px;
+	}
+	ul {
+		list-style-type: none;
+		padding-left: 25px;
+	}
+	li {
+		padding-bottom: 5px;
+		a {
+			color: white;
+		}
+	}
+	.footer__icone {
+		padding-right: 10px;
+		.fa-hands-helping {
+			font-size: 10.5px;
+		}
+	}
 }

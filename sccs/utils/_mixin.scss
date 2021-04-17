@@ -1,53 +1,41 @@
 //fichier SASS contenant tous les mixins
 @mixin ombre {
-  box-shadow: 8px 8px 8px #e7e7e7;
+	box-shadow: 8px 8px 8px #e7e7e7;
 }
 
 @mixin ombre_fonce {
-  box-shadow: 8px 8px 8px #cacaca;
+	box-shadow: 8px 8px 8px #cacaca;
 }
 
 @mixin bouton {
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  background-color: $color-secondary;
-  background: linear-gradient(
-    to right bottom,
-    $color-secondary,
-    $color-primary
-  );
-  font-size: 16px;
-  padding: 10px;
-  width: 220px;
-  height: 50px;
-  outline: 0;
-  border: none;
-  border-radius: 25px;
-  @include ombre();
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	background-color: $color-secondary;
+	background: linear-gradient( to right bottom, $color-secondary, $color-primary);
+	font-size: 16px;
+	padding: 10px;
+	width: 220px;
+	height: 50px;
+	outline: 0;
+	border: none;
+	border-radius: 25px;
+	@include ombre();
 }
 
 @mixin bouton_hover {
-  background: linear-gradient(
-    to right bottom,
-    lighten($color-secondary, 10%),
-    lighten($color-primary, 10%)
-  );
-  @include ombre_fonce();
+	background: linear-gradient( to right bottom, lighten($color-secondary, 10%), lighten($color-primary, 10%));
+	@include ombre_fonce();
 }
 
 @mixin degrade_bg_texte {
-  opacity: 0;
-  transition: 0.5s;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(
-    to right bottom,
-    $color-primary 0%,
-    $color-secondary 100%
-  );
+	opacity: 0;
+	transition: 0.5s;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient( to right bottom, $color-primary 0%, $color-secondary 100%);
 }
